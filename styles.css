@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+h1{
+    z-index: 100;
+    color: white;
+    position: absolute;
+    text-align: center;
+    margin-top: 15vh;
+    margin-left: 30vh;
+    font-size: 2.5em;
+    font-family: 'Raleway', sans-serif;
+    text-shadow: 5px 5px rgba(0, 0, 0, 0.196);
+    font-weight: 800;
+    opacity: 0.8;
+}
+
+span{
+    transition: 0.5s;
+    color: white;
+    opacity: 1;
+}
+
+span:hover{
+    font-size: 1.2em;
+}
+
+.bg{
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgb(51, 26, 69) 400%);
+}
+
+.img{
+    float: left;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-image: url("media/bg.png");
+    background-size: cover;
+    opacity: 0.3;
+}
+
+.celestialbody{
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    position: relative;
+}
+
+#star{
+    z-index: 5;
+    background-image: url("media/star.gif");
+    background-size: cover;
+    width: 520px;
+    height: 520px;
+    position: absolute;
+    animation: staranim 50s linear infinite;
+}
+
+#galaxy{
+    z-index: 2;
+    background-image: url("media/galaxy.gif");
+    background-size: cover;
+    width: 750px;
+    height: 750px;
+    position: absolute;
+    opacity: 0.4;
+    animation: galaxyanim 30s linear infinite;
+}
+
+#ring{
+    z-index: 4;
+    background-image: url("media/ring.gif");
+    background-size: cover;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    animation: ringanim 45s linear infinite;
+}
+
+#noatmos{
+    z-index: 2;
+    background-image: url("media/noatmos.gif");
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    animation: noatmosanim 45s linear infinite;    
+}
+
+@keyframes staranim{
+    0%{transform: translate(0px, 100px);}
+    25%{transform: translate(500px, 100px);}
+    50%{transform: translate(1000px, 100px);}
+    75%{transform: translate(500px, 100px);}
+    100%{transform: translate(0px, 100px);}
+}
+
+@keyframes galaxyanim{
+    0%{transform: translate(0px, -500px);}
+    50%{transform: translate(400px, 800px) skew(80deg);}
+    100%{transform: translate(800px, 1600px);}
+}
+
+@keyframes ringanim{
+    0%{transform: translate(900px, -200px) scale(0.25);}
+    25%{transform: translate(650px, 100px) scale(1);}
+    50%{transform: translate(400px, 300px) scale(1.75);}
+    75%{transform: translate(200px, 500px) scale(2.5);}
+    100%{transform: translate(0px, 900px) scale(3);}
+}
+
+@keyframes noatmosanim{
+    0%{transform: translate(2000px, 2000px) rotate(0deg);}
+    50%{transform: translate(0px, 0px) rotate(179deg);}
+    100%{transform: translate(-2000px, -2000px) rotate(0deg);}
+}
+
